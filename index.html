@@ -1,0 +1,159 @@
+<!doctype html>
+<html color-mode="user" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVP.html - Boilerplate for simple apps</title>
+    <meta
+      name="description"
+      content="MVP.html - Boilerplate for simple demo apps, based on mvp.css."
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48px.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="./favicon-64px.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon-180x180.png"
+    />
+    <script src="./semantic-tabs.js"></script>
+    <link rel="stylesheet" href="./mvp.css" />
+    <style>
+      nav {
+        margin-bottom: 0.3rem;
+      }
+      header {
+        padding-top: 0;
+        padding-bottom: 0.3rem;
+      }
+      header nav img {
+        margin: 0;
+      }
+      main {
+        padding-top: 0;
+      }
+      form {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      hr,
+      footer hr {
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+      footer {
+        padding: 1rem;
+      }
+      pre {
+        margin: 0;
+        padding: 0;
+      }
+      pre code {
+        margin: 0;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+      }
+      code {
+        margin: 0.1rem;
+        padding: 0rem 0.3rem 0rem 0.3rem;
+      }
+      small button {
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 0.2rem;
+      }
+      fieldset {
+        border-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      fieldset label,
+      fieldset button {
+        display: inline-block;
+      }
+      a.active {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="https://github.com/BeyondCodeBootcamp/mvp.html"
+          ><img alt="MVP Boilerplate" src="./favicon-48px.png" height="48" />
+        </a>
+        <h1 style="text-align: left">MVP Boilerplate</h1>
+        <ul>
+          <li>
+            <a data-href="#main" class="active">Main</a>
+          </li>
+          <li>
+            <a data-href="#other">Other</a>
+          </li>
+          <li>
+            <a href="https://github.com/BeyondCodeBootcamp/mvp.html"
+              >Git Source</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <p>A little bit of copypasta and then...</p>
+    </header>
+    <main>
+      <section data-semtab="main">
+        <form onsubmit="document.querySelector('dialog').show();">
+          <header>
+            <h2>Don't click the button!</h2>
+            <p>(even though you kinda want too...)</p>
+          </header>
+          <label>Message</label>
+          <input type="text" name="company" placeholder="Quick brown fox..." />
+          <label
+            ><input type="checkbox" name="checkbox" value="toggled" />
+            Toggle
+          </label>
+          <br />
+          <button type="submit" data-id="show">Click Me</button>
+        </form>
+        <dialog data-id="dialog">
+          <p>Woo-hoo! That tickles!</p>
+          <button
+            data-id="close"
+            onclick="document.querySelector('dialog').close();"
+          >
+            Close
+          </button>
+        </dialog>
+      </section>
+      <section data-semtab="other">
+        <table>
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>Description</th>
+              <th>Edited</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span>Hello, World!</span>
+              </td>
+              <td>
+                <span>as simple as possible, but not simpler</span>
+              </td>
+              <td>⏰03:04:05 pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <hr />
+      <p>© 2024 ACME, Inc</p>
+    </footer>
+    <script>
+      SemTabs.init();
+    </script>
+  </body>
+</html>
