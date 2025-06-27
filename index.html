@@ -101,7 +101,10 @@
     </header>
     <main>
       <section data-semtab="main">
-        <form onsubmit="document.querySelector('dialog').show();">
+        <form
+          method="dialog"
+          onsubmit="document.querySelector('dialog').show();"
+        >
           <header>
             <h2>Don't click the button!</h2>
             <p>(even though you kinda want too...)</p>
